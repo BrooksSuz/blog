@@ -21,24 +21,68 @@
   </header>
 
   <main>
-    <article>
+    <article class="flex">
       <h2>JavaScript Injected CSS</h2>
       <p>
-        I have been working my first job as a developer, and it has been such a great experience! My first project with the company was updating an old search modal the company uses for their salable products.
+        I recently acquired my first job as a developer. So far, it has been such a great experience! My first project with the company has been to update a search modal the company uses for their salable products.
       </p>
 
       <p>
-        The project has taken me a little over a week to get all of the JavaScript working properly and to style the modal along the way. Styling has become one of my favorite parts of the web development process.
+        I have built the modal from the ground up. The project has taken me a little over a week to get all of the JavaScript working properly and to style the modal along the way.
       </p>
 
       <p>
-        In working on this project, I had attempted to insert a simple animation that would make the modal slowly expand when the HTML elements inside of it would be filled.
+        I have to say, styling has become one of my favorite parts of the web development process. It is the cherry on top of a functional project that makes it <strong>feel</strong> like a functional project.
+      </p>
+
+      <p>
+        In working on this project, I had attempted to insert a simple animation that would make the modal gradually expand when the container element is filled with child nodes. In my stylesheet, I used a keyframe that changes the max height CSS property from zero to the desired max height. And it worked...sort of.
+      </p>
+
+      <p>
+        I had encountered that the animation would only work properly if the container element would expand to the max height value that I set inside of the keyframe. Since this wasn't always the case (the modal could contain one to as many possible child nodes as the search allowed) the animation at smaller heights would end abruptly before the set max height value was reached. This resulted in the animation at smaller heights to look clunky.
+      </p>
+
+      <p>
+        This is by design. CSS implemented using stylesheets, the HTML style tag, or inline HTML elements, will be set to those values and will not change.
+      </p>
+
+      <p>
+        This is normally a good effect. Certainly, there are properties that are more flexible than others (in my case, the max height property is a smidge more flexible than the normal height property). However, the property is still set to an unchanging value. This is the core of my issue.
+      </p>
+
+      <p>
+        At first, I was stuck and tried a few fixes...to no avail. I played around with different max height values. I attempted using different CSS properties altogether (both the height and min height properties).
+      </p>
+
+      <p>
+        I slowly began to realize that the animation needed to be dynamic based upon how big the container element became.
+      </p>
+
+      <p>
+        As it turns out, whenever a developer wants something that is dynamic, they have to reach into the "do stuff" portion of their code. To solve my issue, I needed to add the CSS dynamically using JavaScript.
+      </p>
+
+      <p>
+        I had known about adding CSS using JavaScript before beginnning this project. However, it didn't occur to me at first that this was a property that could be manipulated (so I didn't even consider this method). Once I fully understood what I wanted out of my code, I began working.
+      </p>
+
+      <p>
+        I first created a function that accepts one argument (the amount of immediate child nodes inside of the container element). The function contains a switch statement that would return a specific max height in pixels depending upon the integer passed into the function.
+      </p>
+
+      <p>
+        Then, I created another function that accepts a single argument (the return value of the previous function). Inside of this function, I created a keyframe rule using JavaScript's template literal syntax (`Example string ${exampleVariable}.`) and stored it into a variable. Inside the keyframe, I passed the max height variable into the "to" section. I then passed the keyframe variable into the proper stylesheet. Finally, I finished it all by adding the animation rules.
+      </p>
+
+      <p>
+        This little part of my project has changed the way I approach coding in general. I learned that it is better to think about what I want out of my code before writing any. I needed a dynamic animation, but didn't consider using JavaScript until I finally realized what I wanted my code to do.
       </p>
     </article>
   </main>
 
   <footer>
-    <p>&copy; 2023 My Blog. All rights reserved.</p>
+    <p>&copy; 2023 Brooks's Blog. All rights reserved.</p>
   </footer>
   <script src="../scripts.js"></script>
 </body>
