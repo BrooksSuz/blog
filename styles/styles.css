@@ -1,15 +1,24 @@
+:root {
+  --eerie-black: hsl(0, 0%, 13%);
+  --lavender: hsl(240, 39%, 86%);
+  --rose-quartz: hsl(351, 7%, 63%);
+  --viridian: hsl(165, 32%, 41%);
+  --hookers-green: hsl(151, 19%, 39%);
+}
+
 body {
+  align-items: center;
   line-height: 1.6;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--eerie-black);
   padding: 1rem;
   text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: var(--viridian);
   font-family: 'Oswald', sans-serif;
 }
 
@@ -22,31 +31,38 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #fff;
   margin: 0 1rem;
   transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #99cc00;
+  color: var(--hookers-green);
 }
 
 main {
-  padding: 2rem;
+  background-color: var(--eerie-black);
+  padding: 0 2rem;
 }
 
 article {
-  border: 1px solid #ddd;
   gap: 1rem;
   padding: 1rem;
-  margin-bottom: 2rem;
 }
 
 footer {
+  background-color: var(--eerie-black);
   text-align: center;
   padding: 1rem;
-  background-color: #333;
-  color: #fff;
+}
+
+.separator {
+  align-self: center;
+  border: 5px solid var(--hookers-green);
+  width: 100%;
+}
+
+.container-content {
+  width: 70vw;
 }
 
 .flex {
