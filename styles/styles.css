@@ -12,24 +12,38 @@ body {
 }
 
 header {
+  align-items: center;
   padding: 1rem;
-  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  border-radius: 0.5rem;
   color: var(--viridian);
   font-family: 'Oswald', sans-serif;
+  align-items: center;
+}
+
+* > h1, h2, h3 {
+  align-self: center;
 }
 
 h1 {
+  padding: 1rem;
   font-size: 1.5rem;
 }
 
 h2 {
+  align-self: flex-start;
+  padding: 0.5rem;
   font-size: 1.3rem;
 }
 
 h3 {
+  align-self: flex-start;
+  padding: 0.3rem;
   font-size: 1.1rem;
 }
 
@@ -56,7 +70,7 @@ nav a:hover {
 
 article div {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 1rem;
 }
 
