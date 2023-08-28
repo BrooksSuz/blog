@@ -51,8 +51,11 @@ div span {
   font-size: 0.8rem;
 }
 
-nav ul {
+ul {
   list-style: none;
+}
+
+nav ul {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
