@@ -51,11 +51,8 @@ div span {
   font-size: 0.8rem;
 }
 
-ul {
-  list-style: none;
-}
-
 nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
   margin-top: 1rem;
@@ -69,6 +66,10 @@ nav a {
 
 nav a:hover {
   color: var(--hookers-green);
+}
+
+main {
+  overflow-y: auto;
 }
 
 article div {
@@ -102,17 +103,13 @@ em {
 }
 
 .container-content {
-  min-height: 100vh;
-  width: 70vw;
+  height: 100dvh;
+  width: 50vw;
   background-color: var(--eerie-black);
 }
 
 .container-content > section {
   flex: 1;
-}
-
-.fill-space {
-  height: 100vh;
 }
 
 .flex {
@@ -124,4 +121,10 @@ em {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+@media (max-width: 810px) {
+  .container-content {
+    width: 100vw;
+  }
 }
