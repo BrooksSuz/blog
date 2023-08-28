@@ -107,6 +107,10 @@ em {
   background-color: var(--eerie-black);
 }
 
+.container-content > section {
+  flex: 1;
+}
+
 .fill-space {
   height: 100vh;
 }
