@@ -29,11 +29,11 @@ h6 {
   color: var(--viridian);
   font-family: "Oswald", sans-serif;
   align-items: center;
+  user-select: none;
 }
 
 * > h1,
-h2,
-h3 {
+h2 {
   align-self: center;
 }
 
@@ -48,14 +48,12 @@ h2 {
   font-size: 1.3rem;
 }
 
-h3 {
-  align-self: flex-start;
-  padding: 0.3rem;
-  font-size: 1.1rem;
-}
-
 div span {
   font-size: 0.8rem;
+}
+
+nav {
+  user-select: none;
 }
 
 nav ul {
@@ -83,11 +81,16 @@ article div {
   display: flex;
   align-items: center;
   gap: 1rem;
+  user-select: none;
 }
 
 footer {
   text-align: center;
   padding: 1rem;
+}
+
+ul {
+  list-style-position: inside;
 }
 
 em {
@@ -119,18 +122,23 @@ em {
   flex: 1;
 }
 
+.post-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}
+
+.post-entry p {
+  font-size: 0.8rem;
+}
+
 .flex {
   display: flex;
   flex-direction: column;
 }
 
-.contact-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.strong-hello {
+.strong-phrase {
   font-style: italic;
   font-weight: bold;
   font-size: 1.4rem;
