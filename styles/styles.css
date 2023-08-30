@@ -130,6 +130,12 @@ em {
   gap: 1rem;
 }
 
+.strong-hello {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
 @media (max-width: 428px) {
   .container-content {
     width: 100vw;
