@@ -89,6 +89,10 @@ nav a:hover {
   color: var(--hookers-green);
 }
 
+div main {
+  flex: 1;
+}
+
 article div {
   display: flex;
   align-items: center;
