@@ -1,51 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="../../imgs/koala.png" />
-		<link rel="stylesheet" href="../../styles/reset.css" />
-		<link rel="stylesheet" href="../../styles/styles.css" />
-		<title>Git Aliases</title>
-	</head>
-	<body class="flex">
-		<div class="container-content flex">
-			<header class="flex">
-				<h1>Brooks's Blog</h1>
-				<nav>
-					<ul>
-						<li><a href="../../index.html">Home</a></li>
-						<li><a href="../posts.html">Posts</a></li>
-						<li><a href="../about.html">About</a></li>
-					</ul>
-				</nav>
-				<div class="separator"></div>
-			</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../imgs/koala.png" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <title>Git Aliases</title>
+  </head>
+  <body class="flex">
+    <div class="container-content flex">
+      <header class="flex">
+        <h1>Brooks's Blog</h1>
+        <nav>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../posts.html">Posts</a></li>
+            <li><a href="../about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="separator"></div>
+      </header>
 
-			<div class="scrollable flex">
-				<main class="page-padding flex">
-					<article class="text-spacing flex">
-						<div>
-							<h2>Git Aliases</h2>
-							<span>Aug 30th, 2023</span>
-						</div>
-						<p>
-							Git is a technology that has benefited me greatly from learning
-							(and I assume any developer for that matter). It gives your code
-							metaphorical (or literal?) "waypoints." When first learning to
-							code, I relied almost exclusively on ctrl + z to save myself from
-							unfortunate mistakes. What a terrible time that was.
-						</p>
+      <div class="scrollable flex">
+        <main class="page-padding flex">
+          <article class="text-spacing flex">
+            <div>
+              <h2>Git Aliases</h2>
+              <span>Aug 30th, 2023</span>
+            </div>
+            <p>
+              Git is a technology that has benefited me greatly from learning
+              (and I assume any developer for that matter). It is functionally a
+              save button for developers. When first learning to code, I relied
+              almost exclusively on "undoing" to save myself from unfortunate
+              mistakes. What a terrible time that was. Now if I make mistakes, I
+              don't have to rapidly spam my text editor with "ctrl + z" (though
+              I still find myself doing this from time to time).
+            </p>
 
-						<p></p>
-					</article>
-				</main>
+            <p>
+              Git Aliases have become one of my favorite aspects of Git. They
+              are that additional feature that makes maintaining code feel like
+              much less of a hassle.
+            </p>
 
-				<footer>
-					<div class="separator"></div>
-					<p>&copy; 2023 Brooks's Blog. All rights reserved.</p>
-				</footer>
-			</div>
-		</div>
-	</body>
+            <p>
+              Before I get into explaining what Git Aliases are and why they're
+              useful, I'd like to briefly explain what Git even is and the
+              relationship between Git and a remote repository service.
+            </p>
+
+            <p>
+              Git is used on a local machine (a computer). The developer uses
+              Git by entering Git Commands on their command line to prepare text
+              files for editing or saving (and probably other neat purposes I
+              have yet to discover). Git is best paired with a remote repository
+              service that stores developers' local repositories online and
+              allows them to share their work with other developers, backup
+              their projects online, and so on.
+            </p>
+
+            <p>
+              GitHub is by far the most commonly used repository hosting
+              service. To be frank, in my short time of being a developer, I am
+              not very aware of other repository hosting services. I have only
+              ever encountered other developers using GitHub. So I feel no need
+              to use an alternative.
+            </p>
+
+            <p>
+              The combination of Git and GitHub together is a form of version
+              control. They work in tandem to act as one of the many
+              technologies that help create more structure in a codebase.
+            </p>
+
+            <p>
+              There are a handful of Git Commands that are used most commonly.
+              Using these commands, developers will find a workflow that feels
+              the best for their specific needs. This means that they are
+              constantly repeating certain commands all day, every day.
+            </p>
+
+            <p>This leads me into Git Aliases.</p>
+
+            <p>
+              Git Aliases are exactly what they sound like. Aliases for any Git
+              Command they are assigned to. Aliases normally take the form of
+              only a handful of letters or short phrases. They are helpful for
+              reducing keystrokes for common commands.
+            </p>
+
+            <p>
+              For example, I would commonly use the command "git commit -m"
+              followed with a message that describes what that commit is
+              accomplishing (commits are the "saves" in Git). An alias for this
+              could look like "ci = commit -m." Instead of writing the entire
+              command, now the command gets replaced with "ci" followed by the
+              commit message.
+            </p>
+
+            <p>
+              One of my favorite Git Commands to use is "commit --amend -C
+              HEAD." This command "adds" the code into the previous commit. I
+              use this command often because I find myself often committing too
+              early and needing to add the current code into my last commit. So
+              I decided to create an alias for it.
+            </p>
+
+            <p>
+              I assigned the command to "ag" and now all I type is "git ag" and
+              it ammends my git!
+            </p>
+
+            <p>
+              Git aliases are a small portion of Git. And I understand if this
+              post wasn't the most groundbreaking
+            </p>
+          </article>
+        </main>
+
+        <footer>
+          <div class="separator"></div>
+          <p>&copy; 2023 Brooks's Blog. All rights reserved.</p>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
