@@ -27,33 +27,29 @@
           <article class="text-spacing flex">
             <div>
               <h2>Git Aliases</h2>
-              <span>Aug 30th, 2023</span>
+              <span>Sep 5, 2023</span>
             </div>
             <p>
               Git is a technology that has benefited me greatly from learning
               (and I assume any developer for that matter). It is functionally a
               save button for developers. When first learning to code, I relied
-              almost exclusively on "undoing" to save myself from unfortunate
-              mistakes. What a terrible time that was. Now if I make mistakes, I
-              don't have to rapidly spam my text editor with "ctrl + z" (though
-              I still find myself doing this from time to time).
+              almost exclusively on "undoing" to save myself from mistakes. What
+              a terrible time that was. Now if I make mistakes, I don't have to
+              spam my text editor with "ctrl + z" (though I still find myself
+              doing this from time to time).
             </p>
 
             <p>
-              Git Aliases have become one of my favorite aspects of Git. They
-              are that additional feature that makes maintaining code feel like
-              much less of a hassle.
-            </p>
-
-            <p>
-              Before I get into explaining what Git Aliases are and why they're
+              Before I get into explaining what Git aliases are and why they're
               useful, I'd like to briefly explain what Git even is and the
-              relationship between Git and a remote repository service.
+              relationship between Git and a remote repository service. All you
+              currently need to know is they make version control easier on the
+              command line.
             </p>
 
             <p>
               Git is used on a local machine (a computer). The developer uses
-              Git by entering Git Commands on their command line to prepare text
+              Git by entering Git commands on their command line to prepare text
               files for editing or saving (and probably other neat purposes I
               have yet to discover). Git is best paired with a remote repository
               service that stores developers' local repositories online and
@@ -63,59 +59,61 @@
 
             <p>
               GitHub is by far the most commonly used repository hosting
-              service. To be frank, in my short time of being a developer, I am
-              not very aware of other repository hosting services. I have only
-              ever encountered other developers using GitHub. So I feel no need
-              to use an alternative.
+              service. To be frank, in my short time of being a developer, I'm
+              uneducated in other repository hosting services. I have only ever
+              encountered other developers using GitHub; I feel no need to use
+              an alternative.
             </p>
 
             <p>
-              The combination of Git and GitHub together is a form of version
-              control. They work in tandem to act as one of the many
-              technologies that help create more structure in a codebase.
+              Git is a version control system. GitHub is a remote repository
+              service. They work in tandem to be one of the many technologies
+              that add structure in a codebase.
             </p>
 
             <p>
-              There are a handful of Git Commands that are used most commonly.
-              Using these commands, developers will find a workflow that feels
-              the best for their specific needs. This means that they are
-              constantly repeating certain commands all day, every day.
+              There are a handful of Git commands that are used most commonly by
+              developers. They eventually find commands they use the most. This
+              means they are constantly repeating certain commands all day,
+              every day.
             </p>
 
-            <p>This leads me into Git Aliases.</p>
+            <p>This leads me into Git aliases.</p>
 
             <p>
-              Git Aliases are exactly what they sound like. Aliases for any Git
-              Command they are assigned to. Aliases normally take the form of
-              only a handful of letters or short phrases. They are helpful for
-              reducing keystrokes for common commands.
-            </p>
-
-            <p>
-              For example, I would commonly use the command "git commit -m"
-              followed with a message that describes what that commit is
-              accomplishing (commits are the "saves" in Git). An alias for this
-              could look like "ci = commit -m." Instead of writing the entire
-              command, now the command gets replaced with "ci" followed by the
-              commit message.
+              Git aliases are exactly what they sound like. Aliases for the Git
+              command they are assigned to. Aliases normally take the form of a
+              short combination of letters. They are helpful for reducing
+              keystrokes for common commands.
             </p>
 
             <p>
-              One of my favorite Git Commands to use is "commit --amend -C
-              HEAD." This command "adds" the code into the previous commit. I
-              use this command often because I find myself often committing too
-              early and needing to add the current code into my last commit. So
-              I decided to create an alias for it.
+              For example, I often use the command "git commit -m" followed with
+              a message that describes what that commit is accomplishing
+              (commits are the "saves" in Git). An alias for this could look
+              like "ci = commit -m" in the .gitconfig file. Instead of writing
+              the entire command, now the command gets replaced with "ci"
+              followed by the commit message.
             </p>
 
             <p>
-              I assigned the command to "ag" and now all I type is "git ag" and
-              it ammends my git!
+              One of my favorite Git commands to use is "commit --amend -C
+              HEAD." This command adds the code into the previous commit
+              (technically it doesn't add the code, but that's outside the scope
+              of this article). I use this command often because I find myself
+              committing too early and needing to add the current code into my
+              last commit. So I decided to create an alias for it.
             </p>
 
             <p>
-              Git aliases are a small portion of Git. And I understand if this
-              post wasn't the most groundbreaking
+              I assigned the command to "ag" in my .gitconfig file and now all I
+              type is "git ag" and it ammends my git the way I want it to!
+            </p>
+
+            <p>
+              Git aliases are an easy way to make version control on the command
+              line a tad bit easier. I encourage anyone that uses Git on the
+              command line to use them.
             </p>
           </article>
         </main>
