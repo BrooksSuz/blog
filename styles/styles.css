@@ -99,7 +99,7 @@ article div {
   gap: 1rem;
   user-select: none;
 }
-
+where can i put a blog at on linkedin
 footer {
   text-align: center;
   padding: 1rem;
@@ -107,6 +107,12 @@ footer {
 
 ul {
   list-style-position: inside;
+}
+
+img {
+  width: clamp(300px, 30vw, 400px);
+  align-self: center;
+  border-radius: 5px;
 }
 
 em {
@@ -165,7 +171,7 @@ em {
   font-size: 1.4rem;
 }
 
-@media (max-width: 428px) {
+@media (max-width: 810px) {
   .container-content {
     width: 100vw;
   }
