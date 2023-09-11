@@ -79,13 +79,16 @@ nav ul {
   margin-top: 1rem;
 }
 
-nav a {
-  text-decoration: none;
-  margin: 0 1rem;
+a {
   transition: color 0.3s;
 }
 
-nav a:hover {
+nav a {
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+a:hover {
   color: var(--hookers-green);
 }
 
