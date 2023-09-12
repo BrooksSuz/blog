@@ -88,8 +88,14 @@ nav a {
   margin: 0 1rem;
 }
 
-a:hover {
+header a:hover {
   color: var(--hookers-green);
+}
+
+p a {
+  border-radius: 0.1rem;
+  padding: 0 0.2rem;
+  background-color: hsla(151, 19%, 39%, 0.5);
 }
 
 div main {
