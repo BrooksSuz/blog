@@ -1,128 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../../imgs/koala.png" />
-    <link rel="stylesheet" href="../../styles/reset.css" />
-    <link rel="stylesheet" href="../../styles/styles.css" />
-    <title>Git Aliases</title>
-  </head>
-  <body class="flex">
-    <div class="container-content flex">
-      <header class="flex">
-        <h1>Brooks's Blog</h1>
-        <nav>
-          <ul>
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../posts.html">Posts</a></li>
-            <li><a href="../about.html">About</a></li>
-          </ul>
-        </nav>
-        <div class="separator"></div>
-      </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="../../imgs/koala.png" />
+		<link rel="stylesheet" href="../../styles/reset.css" />
+		<link rel="stylesheet" href="../../styles/styles.css" />
+		<title>Git Aliases</title>
+	</head>
+	<body class="flex">
+		<div class="container-content flex">
+			<header class="flex">
+				<h1>Brooks's Blog</h1>
+				<nav>
+					<ul>
+						<li><a href="../../index.html">Home</a></li>
+						<li><a href="../posts.html">Posts</a></li>
+						<li><a href="../about.html">About</a></li>
+					</ul>
+				</nav>
+				<div class="separator"></div>
+			</header>
 
-      <div class="scrollable flex">
-        <main class="page-padding flex">
-          <article class="text-spacing flex">
-            <div>
-              <h2>Git Aliases</h2>
-              <span>Sep 5, 2023</span>
-            </div>
-            <p>
-              Git is a technology that has benefited me greatly from learning
-              (and I assume any developer for that matter). It is functionally a
-              save button for developers. When first learning to code, I relied
-              almost exclusively on "undoing" to save myself from mistakes. What
-              a terrible time that was. Now if I make mistakes, I don't have to
-              spam my text editor with "ctrl + z" (though I still find myself
-              doing this from time to time).
-            </p>
+			<div class="scrollable flex">
+				<main class="page-padding flex">
+					<article class="text-spacing flex">
+						<div>
+							<h2>Git Aliases</h2>
+							<span>Sep 5th, 2023</span>
+						</div>
+						<p>
+							Git is a technology that has benefited me greatly from learning
+							(and I assume any developer for that matter). It is functionally a
+							save button for developers. When first learning to code, I relied
+							almost exclusively on "undoing" to save myself from mistakes. What
+							a terrible time that was. Now if I make mistakes, I don't have to
+							spam my text editor with "ctrl + z" (though I still find myself
+							doing this from time to time).
+						</p>
 
-            <p>
-              Before I get into explaining what Git aliases are and why they're
-              useful, I'd like to briefly explain what Git even is and the
-              relationship between Git and a remote repository service. All you
-              currently need to know is they make version control easier on the
-              command line.
-            </p>
+						<p>
+							Before I get into explaining what Git aliases are and why they're
+							useful, I'd like to briefly explain what Git even is and the
+							relationship between Git and a remote repository service. All you
+							currently need to know is they make version control easier on the
+							command line.
+						</p>
 
-            <p>
-              Git is used on a local machine (a computer). The developer uses
-              Git by entering Git commands on their command line to prepare text
-              files for editing or saving (and probably other neat purposes I
-              have yet to discover). Git is best paired with a remote repository
-              service that stores developers' local repositories online and
-              allows them to share their work with other developers, backup
-              their projects online, and so on.
-            </p>
+						<p>
+							Git is used on a local machine (a computer). The developer uses
+							Git by entering Git commands on their command line to prepare text
+							files for editing or saving (and probably other neat purposes I
+							have yet to discover). Git is best paired with a remote repository
+							service that stores developers' local repositories online and
+							allows them to share their work with other developers, backup
+							their projects online, and so on.
+						</p>
 
-            <p>
-              GitHub is by far the most commonly used repository hosting
-              service. To be frank, in my short time of being a developer, I'm
-              uneducated in other repository hosting services. I have only ever
-              encountered other developers using GitHub; I feel no need to use
-              an alternative.
-            </p>
+						<p>
+							GitHub is by far the most commonly used repository hosting
+							service. To be frank, in my short time of being a developer, I'm
+							uneducated in other repository hosting services. I have only ever
+							encountered other developers using GitHub; I feel no need to use
+							an alternative.
+						</p>
 
-            <p>
-              Git is a version control system. GitHub is a remote repository
-              service. They work in tandem to be one of the many technologies
-              that add structure in a codebase.
-            </p>
+						<p>
+							Git is a version control system. GitHub is a remote repository
+							service. They work in tandem to be one of the many technologies
+							that add structure in a codebase.
+						</p>
 
-            <p>
-              There are a handful of Git commands that are used most commonly by
-              developers. They eventually find commands they use the most. This
-              means they are constantly repeating certain commands all day,
-              every day.
-            </p>
+						<p>
+							There are a handful of Git commands that are used most commonly by
+							developers. They eventually find commands they use the most. This
+							means they are constantly repeating certain commands all day,
+							every day.
+						</p>
 
-            <p>This leads me into Git aliases.</p>
+						<p>This leads me into Git aliases.</p>
 
-            <p>
-              Git aliases are exactly what they sound like. Aliases for the Git
-              command they are assigned to. Aliases normally take the form of a
-              short combination of letters. They are helpful for reducing
-              keystrokes for common commands.
-            </p>
+						<p>
+							Git aliases are exactly what they sound like. Aliases for the Git
+							command they are assigned to. Aliases normally take the form of a
+							short combination of letters. They are helpful for reducing
+							keystrokes for common commands.
+						</p>
 
-            <p>
-              For example, I often use the command "git commit -m" followed with
-              a message that describes what that commit is accomplishing
-              (commits are the "saves" in Git). An alias for this could look
-              like "ci = commit -m" in the .gitconfig file. Instead of writing
-              the entire command, now the command gets replaced with "ci"
-              followed by the commit message.
-            </p>
+						<p>
+							For example, I often use the command "git commit -m" followed with
+							a message that describes what that commit is accomplishing
+							(commits are the "saves" in Git). An alias for this could look
+							like "ci = commit -m" in the .gitconfig file. Instead of writing
+							the entire command, now the command gets replaced with "ci"
+							followed by the commit message.
+						</p>
 
-            <p>
-              One of my favorite Git commands to use is "commit --amend -C
-              HEAD." This command adds the code into the previous commit
-              (technically it doesn't add the code, but that's outside the scope
-              of this article). I use this command often because I find myself
-              committing too early and needing to add the current code into my
-              last commit. So I decided to create an alias for it.
-            </p>
+						<p>
+							One of my favorite Git commands to use is "commit --amend -C
+							HEAD." This command adds the code into the previous commit
+							(technically it doesn't add the code, but that's outside the scope
+							of this article). I use this command often because I find myself
+							committing too early and needing to add the current code into my
+							last commit. So I decided to create an alias for it.
+						</p>
 
-            <p>
-              I assigned the command to "ag" in my .gitconfig file and now all I
-              type is "git ag" and it ammends my git the way I want it to!
-            </p>
+						<p>
+							I assigned the command to "ag" in my .gitconfig file and now all I
+							type is "git ag" and it ammends my git the way I want it to!
+						</p>
 
-            <p>
-              Git aliases are an easy way to make version control on the command
-              line a tad bit easier. I encourage anyone that uses Git on the
-              command line to use them.
-            </p>
-          </article>
-        </main>
+						<p>
+							Git aliases are an easy way to make version control on the command
+							line a tad bit easier. I encourage anyone that uses Git on the
+							command line to use them.
+						</p>
+					</article>
+				</main>
 
-        <footer>
-          <div class="separator"></div>
-          <p>&copy; 2023 Brooks's Blog. All rights reserved.</p>
-        </footer>
-      </div>
-    </div>
-  </body>
+				<footer>
+					<div class="separator"></div>
+					<p>&copy; 2023 Brooks's Blog. All rights reserved.</p>
+				</footer>
+			</div>
+		</div>
+	</body>
 </html>
