@@ -27,7 +27,7 @@
 					<article class="text-spacing flex">
 						<div>
 							<h2>Locality of Behavior</h2>
-							<span>Sep 16, 2023</span>
+							<span>Sep 16th, 2023</span>
 						</div>
 						<p>
 							Today's post will touch on the software development principle
@@ -64,24 +64,24 @@
 							that's easy to understand and maintain. This is accomplished by
 							keeping code behavior within units of code (I'll be referring to
 							them as units). Generally speaking, the farther away the unit is
-							(where it's implemented) from its behavior (the unit's
+							(where it's implemented) from its behavior (the unit's original
 							declaration/functionality), the harder it is to understand what is
 							happening within the unit.
 						</p>
 
 						<p>
 							I find it easier to understand LoB by contrasting it with another
-							principle. Gross talks about
+							principle called
 							<a
 								href="https://en.wikipedia.org/wiki/Separation_of_concerns"
 								target="_blank"
 								>Separtion of Concerns</a
 							>
-							(SoC) a little bit. LoB and SoC have different approaches to
-							accomplish similar goals. As a disclaimer, they are not exact
-							opposites. I'm contrasting them as a means to further
-							understanding of them both. It's probable that both principles can
-							be implemented in a codebase and make sense.
+							(SoC). LoB and SoC have different approaches to accomplish similar
+							goals. As a disclaimer, they are not exact opposites. I'm
+							contrasting them as a means to further understanding of them both.
+							It's probable that both principles can be implemented in a
+							codebase and make sense.
 						</p>
 
 						<p>
@@ -116,8 +116,8 @@
 							behavior. The thought behind this principle is that a unit is best
 							understood by looking at nothing more than that specific unit.
 							This approach welcomes (and even encourages) the mixing of various
-							programming languages into a single unit if doing so keeps the
-							behavior of the unit local.
+							programming languages into a single unit if doing so keeps its
+							behavior inside itself.
 						</p>
 
 						<p>
@@ -141,11 +141,10 @@
 						</p>
 
 						<p>
-							Codebases implemented with SoC in mind (especially large ones)
-							often use abstractions quite a bit. This typically means that
-							developers rely on several files to understand what a single unit
-							does. Gross refers to this phenomena as "spooky action at a
-							distance."
+							Codebases implemented with SoC in mind often use abstractions.
+							This typically means that developers rely on several files to
+							understand what a single unit does. Gross refers to this phenomena
+							as "spooky action at a distance."
 						</p>
 
 						<p>
@@ -164,10 +163,10 @@
 							Realistically, it's best to write code that is understood by the
 							most amount of people. For those that work with multiple other
 							developers, they should follow the conventions that are set in
-							place by the current developers. For solo projects, I still advise
-							developers to follow best practices as often as possible (for
-							their own sake). But hey, everyone has their own interpretations
-							of what is considered to be "best."
+							place by their peers. For solo projects, I still advise developers
+							to follow best practices as often as possible (for their own
+							sake). But hey, everyone has their own interpretations of what is
+							considered to be "best."
 						</p>
 
 						<p>
