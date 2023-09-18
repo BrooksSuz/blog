@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="../../imgs/koala.png" />
+		<link rel="stylesheet" href="../../styles/reset.css" />
+		<link rel="stylesheet" href="../../styles/styles.css" />
+		<title>Locality of Behavior</title>
+	</head>
+	<body class="flex">
+		<div class="container-content flex">
+			<header class="flex">
+				<h1>Brooks's Blog</h1>
+				<nav>
+					<ul>
+						<li><a href="../../index.html">Home</a></li>
+						<li><a href="../posts.html">Posts</a></li>
+						<li><a href="../about.html">About</a></li>
+					</ul>
+				</nav>
+				<div class="separator"></div>
+			</header>
+
+			<div class="scrollable flex">
+				<main class="page-padding flex">
+					<article class="text-spacing flex">
+						<div>
+							<h2>Locality of Behavior</h2>
+							<span>Sep 16th, 2023</span>
+						</div>
+						<p>
+							Today's post will touch on the software development principle
+							called Locality of Behavior (LoB).
+							<a
+								href="https://htmx.org/essays/locality-of-behaviour/"
+								target="_blank"
+								>This essay</a
+							>
+							is what I will be referencing.
+						</p>
+
+						<p>
+							Software development principles are guidelines that developers may
+							choose to follow with the intention of making their code more
+							maintainable, easier to understand, efficient and so on. As a
+							developer, it's good to have an understanding of at least one or
+							two principles in order to keep the chaos that can come from
+							unorderly code at bay. This is especially true for developers that
+							work on the same codebase.
+						</p>
+
+						<p>
+							I learned about LoB from reading
+							<a href="https://grugbrain.dev/" target="_blank"
+								>this fun article</a
+							>
+							by Carson Gross. LoB is one of the many topics Gross touches on in
+							the article. I encourage all to read it.
+						</p>
+
+						<p>
+							The general goal of LoB is simple. Developers should create code
+							that's easy to understand and maintain. This is accomplished by
+							keeping code behavior within units of code (I'll be referring to
+							them as units). Generally speaking, the farther away the unit is
+							(where it's implemented) from its behavior (the unit's original
+							declaration/functionality), the harder it is to understand what is
+							happening within the unit.
+						</p>
+
+						<p>
+							I find it easier to understand LoB by contrasting it with another
+							principle called
+							<a
+								href="https://en.wikipedia.org/wiki/Separation_of_concerns"
+								target="_blank"
+								>Separtion of Concerns</a
+							>
+							(SoC). LoB and SoC have different approaches to accomplish similar
+							goals. As a disclaimer, they are not exact opposites. I'm
+							contrasting them as a means to further understanding of them both.
+							It's probable that both principles can be implemented in a
+							codebase and make sense.
+						</p>
+
+						<p>
+							SoC organizes code based upon
+							<a
+								href="https://en.wikipedia.org/wiki/Concern_(computer_science)"
+								target="_blank"
+								>concern</a
+							>. One of the clearest displays of SoC in my opinion is found in
+							the core web stack. HTML is concerned with structuring a web
+							application, CSS with designing, and JavaScript with adding
+							additional functionality. Each language affects the code
+							differently. Thus, it's common to separate each language into
+							their own file(s)/folder(s). This blog's code is organized with
+							SoC in mind!
+						</p>
+
+						<p>
+							It's easy to see the strengths with this approach. Mixing concerns
+							together may add confusion. This is one reason why frontend
+							developers don't typically write their HTML elements with CSS
+							styles inline. That being said, things change and now
+							<a href="https://tailwindcss.com/" target="_blank"
+								>Tailwind CSS</a
+							>
+							is a very popular CSS framework.
+						</p>
+
+						<p>
+							LoB on the other hand takes a different approach. Rather than
+							organizing code by concern, it organizes code based upon a unit's
+							behavior. The thought behind this principle is that a unit is best
+							understood by looking at nothing more than that specific unit.
+							This approach welcomes (and even encourages) the mixing of various
+							programming languages into a single unit if doing so keeps its
+							behavior inside itself.
+						</p>
+
+						<p>
+							This approach does call to question when (if at all) a developer
+							should rely upon
+							<a
+								href="https://en.wikipedia.org/wiki/Abstraction_(computer_science)"
+								target="_blank"
+								>abstraction</a
+							>. Gross suggests that abstractions are okay when implemented
+							carefully (and not in excess). Gross states, "it is important to
+							make the distinction between inlining the implementation of some
+							behaviour and inlining the invocation (or declaration) of some
+							behaviour." In other words, there is a difference between
+							declaring a function and invoking one. A function that abstracts
+							away complicated logic in its declaration, and is invoked in an
+							obvious manner, strives toward LoB's goal of keeping code easy to
+							understand. Even though creating abstractions innately goes
+							against the main premise of LoB, they are still useful when
+							applied strategically and not in excess.
+						</p>
+
+						<p>
+							Codebases implemented with SoC in mind often use abstractions.
+							This typically means that developers rely on several files to
+							understand what a single unit does. Gross refers to this phenomena
+							as "spooky action at a distance."
+						</p>
+
+						<p>
+							LoB attempts to elminate as much "spooky action at a distance" as
+							possible. Sometimes, this means going against the
+							<a
+								href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"
+								target="_blank"
+								>DRY principle</a
+							>. LoB takes into consideration that it's better to repeat code
+							occasionally than to rely on code that is nested far away from
+							where it's being implemented.
+						</p>
+
+						<p>
+							Realistically, it's best to write code that is understood by the
+							most amount of people. For those that work with multiple other
+							developers, they should follow the conventions that are set in
+							place by their peers. For solo projects, I still advise developers
+							to follow best practices as often as possible (for their own
+							sake). But hey, everyone has their own interpretations of what is
+							considered to be "best."
+						</p>
+
+						<p>
+							I've only recently learned about LoB. I'm very interested in
+							implementing more of it. I can see this principle being easier to
+							implement in code using single-page application frameworks since
+							they, by nature of their design, encourage developers to keep both
+							the structure and functionality of their code in the same place.
+							Luckily for me, I love working with
+							<a href="https://react.dev/" target="_blank">React</a>. So I think
+							I'll be able to implement LoB quite a bit going forward!
+						</p>
+					</article>
+				</main>
+
+				<footer>
+					<div class="separator"></div>
+					<p>&copy; 2023 Brooks's Blog. All rights reserved.</p>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
