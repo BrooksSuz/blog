@@ -159,7 +159,7 @@ em {
 
 .container-content {
   height: 100dvh;
-  width: 50vw;
+  width: clamp(320px, 65vw, 1200px);
   background-color: var(--eerie-black);
 }
 
@@ -195,7 +195,7 @@ em {
   font-size: 1.5rem;
 }
 
-@media (max-width: 810px) {
+@media (max-width: 428px) {
   .container-content {
     width: 100vw;
   }
