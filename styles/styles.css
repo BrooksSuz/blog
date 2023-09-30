@@ -87,12 +87,16 @@ a {
   transition: color 0.3s;
 }
 
+a {
+  transition: color 0.3s;
+}
+
 nav a {
   text-decoration: none;
   margin: 0 1rem;
 }
 
-nav a:hover {
+header a:hover {
   color: var(--hookers-green);
 }
 
@@ -124,6 +128,10 @@ article div {
 footer {
   padding: 0 1rem;
   text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
 }
 
 footer p {
@@ -177,6 +185,7 @@ em {
 
 .post-entry p {
   font-size: 0.8rem;
+  flex: 1;
 }
 
 .flex {
