@@ -27,11 +27,6 @@ body {
   line-height: 1.6;
 }
 
-header {
-  align-items: center;
-  padding: 1rem;
-}
-
 h1,
 h2,
 h3,
@@ -54,39 +49,65 @@ h2 {
 }
 
 h1 {
+  margin: 1rem;
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 h2 {
   align-self: flex-start;
-  padding: 0.5rem;
-  font-size: 1.3rem;
+  padding: 0.5rem 0.2rem;
+  font-size: 1.7rem;
 }
 
-div span {
+article > div {
+  justify-content: flex-start;
+}
+
+article > div span {
+  margin-left: 0.2rem;
+  align-self: flex-start;
   font-size: 0.8rem;
 }
 
 nav {
+  position: sticky;
+  top: 0;
+  padding: 0 1rem;
+  background-color: var(--eerie-black);
   user-select: none;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+}
+
+a {
+  transition: color 0.3s;
 }
 
 nav a {
   text-decoration: none;
   margin: 0 1rem;
-  transition: color 0.3s;
 }
 
 nav a:hover {
   color: var(--hookers-green);
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+li {
+  font-size: 1.2rem;
+}
+
+p a {
+  border-radius: 0.1rem;
+  padding: 0 0.2rem;
+  background-color: hsla(151, 19%, 39%, 0.5);
 }
 
 div main {
@@ -101,15 +122,20 @@ article div {
 }
 
 footer {
+  padding: 0 1rem;
   text-align: center;
-  padding: 1rem;
+}
+
+footer p {
+  font-size: 1rem;
 }
 
 ul {
-  list-style-position: inside;
+  list-style: none;
 }
 
 img {
+  margin-bottom: 1rem;
   width: clamp(300px, 30vw, 400px);
   align-self: center;
   border-radius: 5px;
@@ -136,23 +162,16 @@ em {
 
 .container-content {
   height: 100dvh;
-  width: 50vw;
+  width: clamp(320px, 65vw, 1200px);
   background-color: var(--eerie-black);
-}
-
-.container-content > :nth-child(2) {
-  flex: 1;
   overflow-y: auto;
 }
 
-.scrollable > section {
-  flex: 1;
+.section-container {
+  height: 100%;
 }
 
 .post-entry {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   user-select: none;
 }
 
@@ -168,10 +187,10 @@ em {
 .strong-phrase {
   font-style: italic;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
-@media (max-width: 810px) {
+@media (max-width: 428px) {
   .container-content {
     width: 100vw;
   }
