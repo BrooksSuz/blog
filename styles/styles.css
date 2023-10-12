@@ -142,6 +142,10 @@ ul {
   list-style: none;
 }
 
+ol {
+  list-style-position: inside;
+}
+
 img {
   margin-bottom: 1rem;
   width: clamp(300px, 30vw, 400px);
