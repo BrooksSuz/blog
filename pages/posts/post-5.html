@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="../../imgs/koala.png" />
+		<link rel="stylesheet" href="../../styles/reset.css" />
+		<link rel="stylesheet" href="../../styles/styles.css" />
+		<title>Compiled vs. Interpreted Languages</title>
+	</head>
+	<body class="flex">
+		<div class="container-content flex">
+			<h1>Brooks's Blog</h1>
+
+			<nav>
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../posts.html">Posts</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+				<div class="separator"></div>
+			</nav>
+
+			<div class="flex">
+				<main class="page-padding flex">
+					<article class="text-spacing flex">
+						<div class="flex">
+							<h2>Compiled vs. Interpreted Languages</h2>
+							<span>Oct 14th, 2023</span>
+						</div>
+						<p>
+							For longer than I'd like to admit, I didn't know the difference
+							between an interpreted and a compiled language. I always knew
+							there were differences, but I never fully grasped them. Now that
+							my understanding of the two is much stronger, I'm willing to help
+							others understand!
+						</p>
+
+						<p>
+							As a disclaimer, the terms "interpreted" and "compiled" only exist
+							at a semantic level. Any programming language can be interpreted
+							or compiled (that is, if the appropriate tools exist). What ends
+							up defining whether a language is interpreted or compiled is:
+						</p>
+
+						<ol>
+							<li>A language's strengths/weaknesses.</li>
+							<li>The community's use of a language.</li>
+						</ol>
+
+						<p>
+							I'll use Python as an example. Python is mainly translated into
+							intermediate code (explained later). Then the code gets
+							interpreted. However, Python may also be compiled by using tools
+							like
+							<a href="https://cython.org/" target="_blank">Cython</a> if it
+							makes sense for the context in which it's used. If compiled Python
+							development were to become more popular than interpreted
+							development, it's likely the Python community would describe
+							Python as a compiled language rather than an interpreted one.
+						</p>
+
+						<p>
+							I'll discuss both language types simultaneously, starting with how
+							they differ in the execution process.
+						</p>
+
+						<p>
+							Let's begin with interpreted languages. An interpreted language
+							(JavaScript, PHP, and so on) requires source code to be accessible
+							at runtime. This human-written code is translated into machine
+							code. Then, it's immediately executed line by line. Execution
+							begins at the top of the source code. In this context, the source
+							code is referred to as a script. The interpreter works down the
+							script until there is nothing left to interpret and execute.
+						</p>
+
+						<p>
+							A compiled language (C, C++, and so on) takes source code and runs
+							it through a compiler. The compiler's job is to translate
+							human-written code straight into machine code. The result is an
+							executable file that is readable by the computer's Central
+							Processing Unit (CPU). Running the executable file will then run
+							the code.
+						</p>
+
+						<p>
+							It's worth noting that sometimes both interpreted and compiled
+							languages will get translated into what's called
+							<a
+								href="https://en.wikipedia.org/wiki/Intermediate_representation"
+								target="_blank"
+								>intermediate code</a
+							>. Intermediate code is simply a bridge or a "halfway" point
+							between human-written code and machine code.
+							<a
+								href="https://firefox-source-docs.mozilla.org/js/index.html"
+								target="_blank"
+								>Mozilla's Spidermonkey engine</a
+							>, used to power Firefox, makes use of intermediate code to
+							shorten execution time.
+						</p>
+
+						<p>Back to the topic at hand.</p>
+
+						<p>
+							Executable files are platform-specific. An executable file in a
+							Windows environment will not work in a macOS environment without
+							some tweaking. This means compiled languages are restricted to the
+							environment they can execute within. Thus, making them less
+							portable than interpreted languages.
+						</p>
+
+						<p>
+							On the other hand, interpreted languages are considered to be more
+							portable. Most interpreters are created with various operating
+							systems and hardware architecture in mind. This allows interpreted
+							languages to be run in a multitude of computer environments. For
+							example, JavaScript is the language that dominates the web. Web
+							browsers contain interpreters to run JavaScript. So long as a
+							computer user has access to a web browser, they can execute
+							JavaScript code. Spidermonkey contains an interpreter, as well as
+							<a href="https://v8.dev/" target="_blank"
+								>Google's V8 JavaScript engine</a
+							>
+							that powers Google Chrome.
+						</p>
+
+						<p>
+							If these were the only differences, there wouldn't be an argument
+							to work with compiled code (outside of maintaining legacy
+							codebases that use compiled languages). However, this isn't where
+							the differences end!
+						</p>
+
+						<p>
+							Compiled languages undoubtedly execute quicker than interpreted
+							languages. Simply put, compiled languages translate to machine
+							code before runtime. Thus, there is less to do during runtime.
+							Assuming there is time to compile the code before running it,
+							compiled languages will generally be faster than interpreted
+							languages.
+						</p>
+
+						<p>
+							Unfortunately, interpreted languages lack the speed that compiled
+							languages gain from translating source code to machine code before
+							runtime. Though interpreted languages are generally slower during
+							execution, it doesn't necessarily mean these languages are worse
+							off because of the added translation step during runtime.
+						</p>
+
+						<p>
+							Interpreted languages report errors in terms of the source code.
+							This makes debugging easier compared to compiled languages. Also,
+							the developer doesn't have to wait for code to compile only to
+							find bugs that need to be addressed. The developer can run code
+							quickly over and over again until they are finished debugging.
+						</p>
+
+						<p>
+							Compiled languages generally aren't as easy to debug. They compile
+							the code and then run the code. Because of this, the developer
+							doesn't have the same visibility into the program's behavior
+							compared to interpreted languages.
+						</p>
+
+						<p>
+							Compiled languages may not be as easy to debug. However, they are
+							generally considered more secure. Compiled languages require
+							machine code at runtime. This is great for security. As it turns
+							out, most people aren't very good at programming machine code!
+							This complexity adds additional security to compiled codebases.
+						</p>
+
+						<p>
+							Due to source code being required at runtime for interpreted
+							languages, they are much easier to modify if someone with
+							malicious intentions is able to get their hands on the code. In
+							modern codebases, this is less of an issue. That being said, it's
+							still something to keep in mind for those coding in interpreted
+							languages.
+						</p>
+
+						<p>
+							At this point, I believe I've covered most of the strengths and
+							weaknesses between the two types of programming languages. Like
+							most things in life, one of these types isn't inherently better
+							than the other. They both have contexts where they work the best.
+						</p>
+
+						<p>
+							I've mainly used interpreted languages for the work that I've
+							found myself in. That being said, I'd love to get more experience
+							with compiled languages in the future!
+						</p>
+					</article>
+				</main>
+
+				<footer>
+					<div class="separator"></div>
+					<p>&copy; 2023 Brooks's Blog. All rights reserved.</p>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
