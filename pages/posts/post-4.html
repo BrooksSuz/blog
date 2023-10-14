@@ -1,150 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="../../imgs/koala.png" />
-		<link rel="stylesheet" href="../../styles/reset.css" />
-		<link rel="stylesheet" href="../../styles/styles.css" />
-		<title>Guard Clauses</title>
-	</head>
-	<body class="flex">
-		<div class="container-content flex">
-			<h1>Brooks's Blog</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../imgs/koala.png" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <title>Guard Clauses</title>
+  </head>
+  <body class="flex">
+    <div class="container-content flex">
+      <h1>Brooks's Blog</h1>
 
-			<nav>
-				<ul>
-					<li><a href="../../index.html">Home</a></li>
-					<li><a href="../posts.html">Posts</a></li>
-					<li><a href="../about.html">About</a></li>
-				</ul>
-				<div class="separator"></div>
-			</nav>
+      <nav>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../posts.html">Posts</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+        <div class="separator"></div>
+      </nav>
 
-			<div class="flex">
-				<main class="page-padding flex">
-					<article class="text-spacing flex">
-						<div class="flex">
-							<h2>Guard Clauses</h2>
-							<span>Sep 30th, 2023</span>
-						</div>
-						<p>
-							I, presumably like many others, first began my coding journey by
-							using a lot of if-else statements. Later, I discovered how handy
-							built-in methods could be and how they reduce the need for
-							<a
-								href="https://en.wikipedia.org/wiki/Imperative_programming"
-								target="_blank"
-								>imperative code</a
-							>. Now I try to write more
-							<a
-								href="https://en.wikipedia.org/wiki/Declarative_programming"
-								target="_blank"
-								>declarative code</a
-							>
-							whenever I can. That being said, imperative code is still useful
-							in specific contexts. If-else statements are great for readability
-							when used sparingly.
-						</p>
+      <div class="flex">
+        <main class="page-padding flex">
+          <article class="text-spacing flex">
+            <div class="flex">
+              <h2>Guard Clauses</h2>
+              <span>Sep 30th, 2023</span>
+            </div>
+            <p>
+              I, presumably like many others, first began my coding journey by
+              using a lot of if-else statements. Later, I discovered how handy
+              built-in methods could be and how they reduce the need for
+              <a
+                href="https://en.wikipedia.org/wiki/Imperative_programming"
+                target="_blank"
+                >imperative code</a
+              >. Now I try to write more
+              <a
+                href="https://en.wikipedia.org/wiki/Declarative_programming"
+                target="_blank"
+                >declarative code</a
+              >
+              whenever I can. That being said, imperative code is still useful
+              in specific contexts. If-else statements are great for readability
+              when used sparingly.
+            </p>
 
-						<p>
-							Very quickly I learned that there's some contention toward using
-							the else keyword. I adapted to using only the if keyword early on,
-							but never fully understood why I needed to make that change.
-						</p>
+            <p>
+              Very quickly I learned that there's some contention toward using
+              the else keyword. I adapted to using only the if keyword early on,
+              but never fully understood why I needed to make that change.
+            </p>
 
-						<p>
-							I've recently bettered my understanding of why the else keyword
-							isn't used by many developers today. Today's post will touch on
-							why it's a good idea to remove the else keyword from if-else
-							statements.
-						</p>
+            <p>
+              I've recently bettered my understanding of why the else keyword
+              isn't used by many developers today. Today's post will touch on
+              why it's a good idea to remove the else keyword from if-else
+              statements.
+            </p>
 
-						<p>
-							As a <span class="strong-phrase">tiny</span> disclosure, there is
-							no one correct way to code. The words that follow simply describe
-							where I stand currently and how I personally write code.
-						</p>
+            <p>
+              As a <span class="strong-phrase">tiny</span> disclosure, there is
+              no one correct way to code. The words that follow simply describe
+              where I stand currently and how I personally write code.
+            </p>
 
-						<p>
-							To begin, this is by no means new information. Jeff Atwood wrote
-							about
-							<a
-								href="https://blog.codinghorror.com/flattening-arrow-code/"
-								target="_blank"
-								>arrow code and guard clauses</a
-							>
-							a long time ago.
-						</p>
+            <p>
+              To begin, this is by no means new information. Jeff Atwood wrote
+              about
+              <a
+                href="https://blog.codinghorror.com/flattening-arrow-code/"
+                target="_blank"
+                >arrow code and guard clauses</a
+              >
+              a long time ago.
+            </p>
 
-						<p>
-							Firstly, I can't simply remove the else keyword from a codebase
-							and have it function exactly as it would without the keyword
-							there. Doing so would (understandably) break the code. So I need
-							to change how the code is written.
-						</p>
+            <p>
+              Firstly, I can't simply remove the else keyword from a codebase
+              and have it function exactly as it would without the keyword
+              there. Doing so would (understandably) break the code. So I need
+              to change how the code is written.
+            </p>
 
-						<p>
-							Normally within if-else statements, the "main" code is written in
-							the if block while the corner case is written in the else block.
-							However, without the else keyword, the corner case will be moved
-							into the if block while the "main" code is placed in the current
-							scope directly below the if block. This also requires there to be
-							an exit statement at the end of the if block so the code doesn't
-							continue to run. Usually this is a blank return statement. But
-							I've also used the continue keyword to exit the current iteration
-							of a loop.
-						</p>
+            <p>
+              Normally within if-else statements, the "main" code is written in
+              the if block while the corner case is written in the else block.
+              However, without the else keyword, the corner case will be moved
+              into the if block while the "main" code is placed in the current
+              scope directly below the if block. This also requires there to be
+              an exit statement at the end of the if block so the code doesn't
+              continue to run. Usually this is a blank return statement. But
+              I've also used the continue keyword to exit the current iteration
+              of a loop.
+            </p>
 
-						<p>
-							There are great benefits to writing if-else statements this way.
-							Firstly, the "main" code and the corner case code are no longer
-							coupled together. If the corner case is met, then it will run that
-							code. It's as simple as that. Removing tightly coupled code leads
-							to a cleaner and less bug-ridden codebase.
-						</p>
+            <p>
+              There are great benefits to writing if-else statements this way.
+              Firstly, the "main" code and the corner case code are no longer
+              coupled together. If the corner case is met, then it will run that
+              code. It's as simple as that. Removing tightly coupled code leads
+              to a cleaner and less bug-ridden codebase.
+            </p>
 
-						<p>
-							Secondly, it just makes sense (as lazy as that sounds). At first
-							thought, putting the "main" code before any corner cases feels
-							intuitive. The "main" code is the star of the show, so why put it
-							before code that won't be run as often? As it turns out,
-							displaying the less desirable path first shows the developer
-							reading the code the exceptions to the code upfront. This
-							encourages the developer to understand the less common outcomes
-							before they understand the main functionality of the code. Again,
-							this is very helpful for identifying and removing bugs.
-						</p>
+            <p>
+              Secondly, it just makes sense (as lazy as that sounds). At first
+              thought, putting the "main" code before any corner cases feels
+              intuitive. The "main" code is the star of the show, so why put it
+              before code that won't be run as often? As it turns out,
+              displaying the less desirable path first shows the developer
+              reading the code the exceptions to the code upfront. This
+              encourages the developer to understand the less common outcomes
+              before they understand the main functionality of the code. Again,
+              this is very helpful for identifying and removing bugs.
+            </p>
 
-						<p>
-							Finally, there is less nesting. Nesting is great for
-							organization...until it isn't. It's easy to slip into what Atwood
-							calls arrow code when there is an overreliance on if-else
-							statements. Using guard clauses actually removes the "main" code
-							from being nested in an if block and brings it out into the scope
-							that the developer is currently working within.
-						</p>
+            <p>
+              Finally, there is less nesting. Nesting is great for
+              organization...until it isn't. It's easy to slip into what Atwood
+              calls arrow code when there is an overreliance on if-else
+              statements. Using guard clauses actually removes the "main" code
+              from being nested in an if block and brings it out into the scope
+              that the developer is currently working within.
+            </p>
 
-						<p>
-							Generally speaking, guard clauses keep code clean. Codebases that
-							contain guard clauses use less code (which is generally a good
-							goal to strive for) and reduce nesting where it's unnecessary to
-							do so.
-						</p>
+            <p>
+              Generally speaking, guard clauses keep code clean. Codebases that
+              contains guard clauses use less code (which is generally a good
+              goal to strive for) and reduce nesting where it's unnecessary to
+              do so.
+            </p>
 
-						<p>
-							For developers that struggle to keep their code clean, and aren't
-							currently using guard clauses, give them a shot! They have
-							certainly helped me keep my code cleaner and easier to read.
-						</p>
-					</article>
-				</main>
+            <p>
+              For developers that struggle to keep their code clean, and aren't
+              currently using guard clauses, give them a shot! They have
+              certainly helped me keep my code cleaner and easier to read.
+            </p>
+          </article>
+        </main>
 
-				<footer>
-					<div class="separator"></div>
-					<p>&copy; 2023 Brooks's Blog. All rights reserved.</p>
-				</footer>
-			</div>
-		</div>
-	</body>
+        <footer>
+          <div class="separator"></div>
+          <p>&copy; 2023 Brooks's Blog. All rights reserved.</p>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
