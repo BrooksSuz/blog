@@ -38,7 +38,7 @@ h6 {
   background-color: black;
   border-radius: 0.5rem;
   color: var(--viridian);
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   align-items: center;
   user-select: none;
 }
@@ -177,6 +177,7 @@ em {
   width: clamp(320px, 65vw, 1200px);
   background-color: var(--eerie-black);
   overflow-y: auto;
+  transform: translateZ(0);
 }
 
 .section-container {
