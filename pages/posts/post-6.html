@@ -1,185 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <link
-      rel="icon"
-      href="../../imgs/koala.png"
-    />
-    <link
-      rel="stylesheet"
-      href="../../styles/reset.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../styles/styles.css"
-    />
-    <title>Introduction to TypeScript</title>
-  </head>
-  <body class="flex">
-    <div class="container-content flex">
-      <h1>Brooks's Blog</h1>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="icon"
+			href="../../imgs/koala.png"
+		/>
+		<link
+			rel="stylesheet"
+			href="../../styles/reset.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="../../styles/styles.css"
+		/>
+		<title>Introduction to TypeScript</title>
+	</head>
+	<body class="flex">
+		<div class="container-content flex">
+			<h1>Brooks's Blog</h1>
 
-      <nav>
-        <ul>
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../posts.html">Posts</a></li>
-          <li><a href="../about.html">About</a></li>
-        </ul>
-        <div class="separator"></div>
-      </nav>
+			<nav>
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../posts.html">Posts</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+				<div class="separator"></div>
+			</nav>
 
-      <div class="flex">
-        <main class="page-padding flex">
-          <article class="text-spacing flex">
-            <div class="flex">
-              <h2>Introduction to TypeScript</h2>
-              <span>Dec 9th, 2023</span>
-            </div>
-            <p>
-              Hello all! I've recently been learning TypeScript. It's something
-              I've wanted to do for quite some time now, so I'm happy that I'm
-              setting aside time to do so!
-            </p>
+			<div class="flex">
+				<main class="page-padding flex">
+					<article class="text-spacing flex">
+						<div class="flex">
+							<h2>Introduction to TypeScript</h2>
+							<span>Dec 9th, 2023</span>
+						</div>
+						<p>
+							Hello all! I've recently been learning TypeScript. It's something
+							I've wanted to do for quite some time now, so I'm happy that I'm
+							setting aside time to do so!
+						</p>
 
-            <p>
-              This post will briefly introduce TypeScript. Currently, I'm still
-              a novice. However, since TypeScript is a superset of JavaScript (a
-              language I feel quite comfortable with), and since I feel very
-              comfortable with
-              <a
-                href="https://en.wikipedia.org/wiki/Type_system#Static_type_checking"
-                target="_blank"
-                >static typing</a
-              >
-              from learning C# in my current workplace, I feel confident that
-              I'll learn TypeScript quite quickly and will thank myself for
-              doing so in the future! Before jumping directly in, I do want to
-              begin by describing why TypeScript is a useful addition to
-              JavaScript.
-            </p>
+						<p>
+							This post will briefly introduce TypeScript. Currently, I'm still
+							a novice. However, since TypeScript is a superset of JavaScript (a
+							language I feel quite comfortable with), and since I feel very
+							comfortable with
+							<a
+								href="https://en.wikipedia.org/wiki/Type_system#Static_type_checking"
+								target="_blank"
+								>static typing</a
+							>
+							from learning C# in my current workplace, I feel confident that
+							I'll learn TypeScript quite quickly and will thank myself for
+							doing so in the future! Before jumping directly in, I do want to
+							begin by describing why TypeScript is a useful addition to
+							JavaScript.
+						</p>
 
-            <p>
-              Also, as a quick disclaimer, all of the information regarding
-              TypeScript comes from what I have learned by using TypeScript, as
-              well as from the
-              <a
-                href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
-                target="_blank"
-                >JavaScript portion of the docs</a
-              >.
-            </p>
+						<p>
+							Also, as a quick disclaimer, all of the information regarding
+							TypeScript comes from what I have learned by using TypeScript, as
+							well as from the
+							<a
+								href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
+								target="_blank"
+								>JavaScript portion of the docs</a
+							>.
+						</p>
 
-            <p>
-              JavaScript is what's known as a
-              <a
-                href="https://en.wikipedia.org/wiki/Strong_and_weak_typing"
-                target="_blank"
-                >loosely (or weakly...or dynamically) typed language</a
-              >. Per the wiki page I provided, "A weakly typed language has
-              looser typing rules and may produce unpredictable or even
-              erroneous results or may perform implicit type conversion at
-              runtime. Advocates of dynamically typed languages find such
-              concerns to be overblown and believe that static typing actually
-              introduces an exponentially larger set of problems and
-              inefficiencies."
-            </p>
+						<p>
+							JavaScript is what's known as a
+							<a
+								href="https://en.wikipedia.org/wiki/Strong_and_weak_typing"
+								target="_blank"
+								>loosely (or weakly...or dynamically) typed language</a
+							>. Per the wiki page I provided, "A weakly typed language has
+							looser typing rules and may produce unpredictable or even
+							erroneous results or may perform implicit type conversion at
+							runtime. Advocates of dynamically typed languages find such
+							concerns to be overblown and believe that static typing actually
+							introduces an exponentially larger set of problems and
+							inefficiencies."
+						</p>
 
-            <p>
-              That portion of the wiki sheds light on both the pros and cons of
-              loosely typed languages. Speaking as someone who learned to code
-              using JavaScript, I understand the many opinions on loosely typed
-              languages.
-            </p>
+						<p>
+							That portion of the wiki sheds light on both the pros and cons of
+							loosely typed languages. Speaking as someone who learned to code
+							using JavaScript, I understand the many opinions on loosely typed
+							languages.
+						</p>
 
-            <p>
-              For those who are brand new to programming in general, I would
-              recommend them to start with a loosely typed language. Learning to
-              code is already a monumental task in and of itself. A loosely
-              typed language has a lower barrier of entry and gets new
-              programmers writing code that much faster.
-            </p>
+						<p>
+							For those who are brand new to programming in general, I would
+							recommend them to start with a loosely typed language. Learning to
+							code is already a monumental task in and of itself. A loosely
+							typed language has a lower barrier of entry and gets new
+							programmers writing code that much faster.
+						</p>
 
-            <p>Alrighty, back on track.</p>
+						<p>Alrighty, back on track.</p>
 
-            <p>
-              Like I said before, TypeScript is a superset of JavaScript. This
-              simply means it's built on top of JavaScript. It has all of the
-              features that JavaScript contains and more!
-            </p>
+						<p>
+							Like I said before, TypeScript is a superset of JavaScript. This
+							simply means it's built on top of JavaScript. It has all of the
+							features that JavaScript contains and more!
+						</p>
 
-            <p>
-              TypeScript determines types by inference. The old saying of, "if
-              it looks like a duck" applies here because TypeScript will infer
-              types based upon what the variable "looks" like. Take the
-              following variable declaration for instance:
-            </p>
+						<p>
+							TypeScript determines types by inference. The old saying of, "if
+							it looks like a duck" applies here because TypeScript will infer
+							types based upon what the variable "looks" like. Take the
+							following variable declaration for instance:
+						</p>
 
-            <p>let str = "Hello Reader!";</p>
+						<p>let str = "Hello Reader!";</p>
 
-            <p>
-              TypeScript determines types based upon contextual information. In
-              the example above, the inference was determined by the variable
-              declaration. Though, if the developer prefers to manually input
-              types, that's also possible.
-            </p>
+						<p>
+							TypeScript determines types based upon contextual information. In
+							the example above, the inference was determined by the variable
+							declaration. Though, if the developer prefers to manually input
+							types, that's also possible.
+						</p>
 
-            <p>
-              Speaking of static typing, TypeScript gives the power of static
-              typing to the loosely typed language that is JavaScript! With it,
-              the developer has a firm distinction between data types in their
-              JavaScript code. This distinction will help prevent bugs arising
-              in the future.
-            </p>
+						<p>
+							Speaking of static typing, TypeScript gives the power of static
+							typing to the loosely typed language that is JavaScript! With it,
+							the developer has a firm distinction between data types in their
+							JavaScript code. This distinction will help prevent bugs arising
+							in the future.
+						</p>
 
-            <p>
-              TypeScript also introduces interface declarations. Interface
-              declarations are quite useful for declaring an "abstract" for an
-              object before creating the object itself. The following code
-              displays an example interface:
-            </p>
+						<p>
+							TypeScript also introduces interface declarations. Interface
+							declarations are quite useful for declaring an "abstract" for an
+							object before creating the object itself. The following code
+							displays an example interface:
+						</p>
 
-            <p>
-              interface Pet {<br /><span style="margin-left: 1rem"
-                >name: string;</span
-              ><br /><span style="margin-left: 1rem">age: number;</span><br />}
-            </p>
+						<p>
+							interface Pet {<br /><span style="margin-left: 1rem"
+								>name: string;</span
+							><br /><span style="margin-left: 1rem">age: number;</span><br />}
+						</p>
 
-            <p>
-              That interface can now be used to create a "Pet" object. If a
-              "Pet" object is declared incorrectly, TypeScript will display a
-              warning message. Interfaces require more code upfront for less
-              hassle in debugging later.
-            </p>
+						<p>
+							That interface can now be used to create a "Pet" object. If a
+							"Pet" object is declared incorrectly, TypeScript will display a
+							warning message. Interfaces require more code upfront for less
+							hassle in debugging later.
+						</p>
 
-            <p>
-              Following that thought, a big part of TypeScript (and statically
-              typed languages in general) is that more code now is better than
-              more bugs later. For smaller-midsized projects, vanilla JavaScript
-              is less of a hassle. For larger projects, TypeScript will
-              certainly help reduce the amount of debugging required.
-            </p>
+						<p>
+							Following that thought, a big part of TypeScript (and statically
+							typed languages in general) is that more code now is better than
+							more bugs later. For smaller-midsized projects, vanilla JavaScript
+							is less of a hassle. For larger projects, TypeScript will
+							certainly help reduce the amount of debugging required.
+						</p>
 
-            <p>
-              There's still quite a bit to TypeScript I haven't touched on.
-              TypeScript's typing system and interface declarations will get
-              novice TypeScript users like myself quite far in their TypeScript
-              projects. So, I think I'll leave it at that.
-            </p>
+						<p>
+							There's still quite a bit to TypeScript I haven't touched on.
+							TypeScript's typing system and interface declarations will get
+							novice TypeScript users like myself quite far in their TypeScript
+							projects. So, I think I'll leave it at that.
+						</p>
 
-            <p>Thank you for reading!</p>
-          </article>
-        </main>
+						<p>Thank you for reading!</p>
+					</article>
+				</main>
 
-        <footer>
-          <div class="separator"></div>
-          <p>&copy; 2023 Brooks's Blog. All rights reserved.</p>
-        </footer>
-      </div>
-    </div>
-  </body>
+				<footer>
+					<div class="separator"></div>
+					<p>&copy; 2024 Brooks's Blog. All rights reserved.</p>
+				</footer>
+			</div>
+		</div>
+	</body>
 </html>
